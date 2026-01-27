@@ -8,7 +8,7 @@
 /* ----- TYPOGRAPHY ----- */
 @font-face {
   font-family: "MyFont";
-  src: url("../resources/movie-quotes/bloody-scary-font/BloodyScaryRegular-K7q8y.ttf") format("truetype");
+  src: url("../include/movie-quotes/bloody-scary-font/BloodyScaryRegular-K7q8y.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
