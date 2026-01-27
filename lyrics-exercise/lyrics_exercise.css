@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  /* background-color: #f7f7f7; */
+  color: #1f1f1f;
+}
+
+
+/* ----- TYPOGRAPHY (use rem) ----- */
+h2#nav-title {
+    margin: 0px;
+    width: 100%;
+    color: rgb(255, 183, 0);
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+div#header-text > h1#header-title {
+    color: rgb(255, 183, 0);
+    text-shadow: 2px 2px 7px #1f1f1f;
+    margin: 0px;
+}
+div#header-text > h3#header-subtitle {
+    color: rgb(106, 76, 0);
+    margin-bottom: 15px;
+    margin-top: 8px;
+}
+div#header-text-group > p#album {
+    margin: 0px;
+}
+div#header-text-group > h6#date {
+    color: #414141;
+    font-weight: normal;
+    margin: 0px;
+}
+
+aside > h2#about-title {
+    text-align: center;
+    color: rgb(255, 183, 0);
+}
+aside > p#about-text {
+    text-indent: 20px;
+    margin-bottom: 0px;
+}
+
+div.lyric-div > p {
+    margin: 0px;
+}
+div.lyric-div > p.lyric-description {
+    margin-bottom: 15px;
+    color: rgb(106, 76, 0);
+}
+div.lyric-div > p.lyric-line {
+    margin-bottom: 8px;
+}
+div.lyric-div > p > span.other-performer {
+    font-style: italic;
+    color: #547171;
+}
+
+footer#footer div.footer-subgroup p {
+    color: #e0e0e0;
+    margin: 0px;
+}
+div.footer-subgroup > h6.footer-subgroup-title {
+    color: rgb(255, 183, 0);
+    margin: 0px 0px 8px 0px;
+}
+div.footer-subgroup span.footer-extra-info {
+    color: #acacac;
+    font-size: .8rem;
+    font-style: italic;
+    margin: 0px;
+}
+
+
+/* ----- IMAGING ----- */
+section#spacer-section {
+    height: 85px;
+    width: 100%;
+    background-color: #415757;
+}
+
+div#spotify-container {
+    min-width: 100vw;
+    background-color: #415757;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 15px 15px 15px;
+}
+iframe#spotify-player {
+    border-radius: 0;
+    background-color: #415757;
+}
+
+
+/* ----- FORMATTING & Visuals ----- */
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f7f7f7;
+}
+
+nav#nav {
+    background-color: #415757;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid #1f1f1f;
+    /* align-content: center;
+    justify-content: space-between; */
+    align-items: center;
+    justify-items: center;
+    grid-auto-columns: max-content;
+}
+div#nav-btns {
+    justify-self: flex-start;
+}
+div#nav-btns > button.nav-btn {
+    border-radius: 5px;
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(255, 183, 0);
+        box-shadow: 2px 2px 7px #1f1f1f8d;
+    }
+}
+form#nav-form {
+    justify-self: flex-end;
+}
+form#nav-form > input {
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    &[type="submit"]:hover {
+        cursor: pointer;
+        background-color: rgb(255, 183, 0);
+        box-shadow: 2px 2px 7px #1f1f1f8d;
+    }
+    &[type="text"] {
+        padding: 1px 8px;
+        &:focus {
+            outline: none;
+            border-color: rgb(255, 183, 0);
+        }
+    }
+}
+
+header#header {
+    margin: 0px;
+}
+section#header-bottom-section {
+    background: linear-gradient(to bottom, 
+    #415757 0%, #5a6b6b 20%, #aebcbc 60%, #f7f7f7 85%);
+    padding: 20px 15px 60px 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    column-gap: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+section#header-bottom-section > div#header-text {
+    min-width: max-content;
+    align-self: flex-start;
+}
+section#header-bottom-section > aside {
+    align-self: flex-end;
+    max-width: 565px;
+}
+
+main#main-content {
+    padding: 2px 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+main#main-content > section#lyrics {
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    width: 75%
+}
+
+footer#footer {
+    background-color: #415757;
+    padding: 40px 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border-top: 1px solid #1f1f1f;
+}
+footer#footer > section#footer-container {
+    max-width: 75%;
+}
+section#footer-container > div.footer-subgroup {
+    margin-bottom: 25px;
+}

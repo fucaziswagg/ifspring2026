@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Own Lyric Sheet</title>
+    <meta name="author" content="Bean Royal">
+    <meta name="description" content="Pick a song you like, and create a styled HTML document that 
+  presents it's lyrics with appropriate markup and basic styling.">
+    <meta name="assignment #" content="2">
+    <meta name="copyright" content="2026 Bean Royal">
+    <meta name="generator" content="VS Code">
+    <meta name="rating" content="general">
+    <link rel="stylesheet" type="text/css" href="lyrics_exercise.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <nav id="nav">
+        <h2 id="nav-title">Lyrics.com</h2>
+        <div id="nav-btns">
+            <button class="nav-btn">Home</button>
+            <button class="nav-btn">Trending</button>
+            <button class="nav-btn">Recent</button>
+        </div>
+        <form id="nav-form" action="https://duckduckgo.com" method="GET">
+            <input id="nav-search-bar" type="text" name="q" placeholder="Search lyrics & more">
+            <input id="nav-search-btn" type="submit" value="Search">
+        </form>
+    </nav>
+
+    <section id="spacer-section"></section>
+
+    <header id="header">
+        <div id="spotify-container">
+            <iframe id="spotify-player" data-testid="embed-iframe"
+                src="https://open.spotify.com/embed/track/2lRe5wBRm4xaSKTbDn2vLD?utm_source=generator" width="75%"
+                height="152" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+        <section id="header-bottom-section">
+            <div id="header-text">
+                <h1 id="header-title">Trippy</h1>
+                <h3 id="header-subtitle">Anderson .Paak</h3>
+                <div id="header-text-group">
+                    <p id="album" class="header-text">Oxnard (track 11)</p>
+                    <h6 id="date" class="header-text">November 16, 2018</h6>
+                </div>
+            </div>
+            <aside>
+                <h2 id="about-title">About</h2>
+                <p id="about-text">“Trippy” marks the first collaboration between Anderson .Paak and J. Cole.
+                    The topic of the song is love and intimacy with their respective partners.
+                    This theme is touched on in the opening sample, featuring late,
+                    great comedian Rodney Dangerfield.</p>
+            </aside>
+        </section>
+    </header>
+
+    <main id="main-content">
+        <section id="lyrics">
+            <div class="lyric-div">
+                <p class="lyric-description">[Intro: Rodney Dangerfield & <span class="other-performer">Johnny
+                        Carson]</span></p>
+                <p class="lyric-line">Ah, that's right, doll</p>
+                <p class="lyric-line">But everyone wants love</p>
+                <p class="lyric-line">Love is the answer, Johnny</p>
+                <p class="lyric-line">Everyone is lookin' for love, deep love</p>
+                <p class="lyric-line">A lifetime of deep love, you know?</p>
+                <p class="lyric-line"><span class="other-performer">Don't you have any luck with women?</span></p>
+                <p class="lyric-line">I never had luck with women</p>
+                <p class="lyric-line">I'm no ladies man, I know that, Johnny</p>
+                <p class="lyric-line">And I never got girls when I was a kid in show business either, you know?</p>
+                <p class="lyric-line">One girl told me, <span class="other-performer">"Come on over, there's nobody
+                        home"</span></p>
+                <p class="lyric-line">I went over, there was nobody home!</p>
+            </div>
+
+            <div class="lyric-div">
+                <p class="lyric-description">[Pre-Chorus: Anderson .Paak]</p>
+                <p class="lyric-line">You and I will always be somewhere between</p>
+                <p class="lyric-line">You and I will always be somewhere between</p>
+                <p class="lyric-line">Sweet Trippy, I'm yours for the gettin'</p>
+                <p class="lyric-line">Talking foolish, at the moon, I was gone, eighteen hunnid, sippin'</p>
+                <p class="lyric-line">I can't get rid of you, all the places that I used to go and kick it</p>
+                <p class="lyric-line">All this weight that I'm liftin', trippy</p>
+            </div>
+
+            <div class="lyric-div">
+                <p class="lyric-description">[Chorus: Anderson .Paak]</p>
+                <p class="lyric-line">Come meet me in the middle, right there where you always be</p>
+                <p class="lyric-line">Somewhere in between, you and I will always meet</p>
+                <p class="lyric-line">Come meet me in the middle, right there where we always be</p>
+                <p class="lyric-line">Somewhere in between, you and I will always meet</p>
+                <p class="lyric-line">Come meet me in the middle
+                    <span class="other-performer">(I'll meet you in the middle)</span>
+                </p>
+                <p class="lyric-line">Come meet me in the middle
+                    <span class="other-performer">(Somewhere in between)</span>
+                </p>
+                <p class="lyric-line">Come meet me in the middle
+                    <span class="other-performer">(You and I will always meet)</span>
+                </p>
+                <p class="lyric-line">Right there where we always be
+                    <span class="other-performer">(Somewhere in between)</span>
+                </p>
+            </div>
+
+            <div class="lyric-div">
+                <p class="lyric-description">[Verse 1: Anderson .Paak]</p>
+                <p class="lyric-line">Without a space I could feel, in the words to define</p>
+                <p class="lyric-line">Pick it up, if you will, heavy weight on my mind</p>
+                <p class="lyric-line">Just a pretty brown thing wit'cho head in the clouds</p>
+                <p class="lyric-line">Why don't you put the round thing in the palm of my hands</p>
+                <p class="lyric-line">Up enough for the thrill, over over you spill</p>
+                <p class="lyric-line">Open up, I could tell</p>
+                <p class="lyric-line">I could see when it's real</p>
+                <p class="lyric-line">And as soon as I grab a hold of ya, I'ma have to let go of ya</p>
+            </div>
+
+            <div class="lyric-div">
+                <p class="lyric-description">[Verse 2: J. Cole]</p>
+                <p class="lyric-line">Came down the block, something sick, but it's rented</p>
+                <p class="lyric-line">I don't give a fuck, bitch, either way, I'm in it</p>
+                <p class="lyric-line">I ain't gotta prove to you that I got bread</p>
+                <p class="lyric-line">Niggas talking money but be broker than the bed</p>
+                <p class="lyric-line">That I slept on back in Mohammed crib</p>
+                <p class="lyric-line">'Member fuckin' hoes leaning all to the left</p>
+                <p class="lyric-line">Don't know why they rock wit' a nigga, but they did</p>
+                <p class="lyric-line">Damn sure wasn't the money, maybe it's the kid?</p>
+                <p class="lyric-line">Used to have a honey that I loved when we was young but somehow
+                    we got disconnected before Facebook got so big</p>
+                <p class="lyric-line">I used to search her name hoping we could reconnect</p>
+                <p class="lyric-line">But if I sent the message, would she still be on my dick?</p>
+                <p class="lyric-line">When I couldn't find her, had me feeling mad lame</p>
+                <p class="lyric-line">Maybe she got married and she changed her last name</p>
+                <p class="lyric-line">Maybe she just ain't up on the latest of the internet and ain't got into that</p>
+                <p class="lyric-line">But give her time, that'll change</p>
+                <p class="lyric-line">Bingo, what do you know?</p>
+                <p class="lyric-line">Years later, late night after a show we here later</p>
+                <p class="lyric-line">Brown skin, love how it glow, your hair tighter</p>
+                <p class="lyric-line">Ask, <span class="other-performer">"Is it cool if I smoke?"</span> Go 'head, light
+                    up</p>
+                <p class="lyric-line">High from your fragrance, I love, you smell purrty</p>
+                <p class="lyric-line">Know I got it straight from the mud, my nails dirty</p>
+                <p class="lyric-line">If somehow we both loose touch, I won't lie</p>
+                <p class="lyric-line">Ya got me open way too much, I'm gon' find ya</p>
+            </div>
+
+            <div class="lyric-div">
+                <p class="lyric-description">[Pre-Chorus: Anderson .Pakk]</p>
+                <p class="lyric-line">Sweet trippy, you're lost in the deep end</p>
+                <p class="lyric-line">Like water to a fish scale, love to watch you swim</p>
+                <p class="lyric-line">I can't get rid of you, all the places that I used to go and kick it</p>
+                <p class="lyric-line">All this weight that I'm liftin', trippy</p>
+            </div>
+
+            <div class="lyric-div">
+                <p class="lyric-description">[Chorus: Anderson .Paak]</p>
+                <p class="lyric-line">Come meet me in the middle, right there where you always be</p>
+                <p class="lyric-line">Somewhere in between, you and I will always meet</p>
+                <p class="lyric-line">Come meet me in the middle, right there where we always be</p>
+                <p class="lyric-line">Somewhere in between, you and I will always meet</p>
+                <p class="lyric-line">Come meet me in the middle
+                    <span class="other-performer">(You and I will always be)</span>
+                </p>
+                <p class="lyric-line">Come meet me in the middle
+                    <span class="other-performer">(Somewhere in between)</span>
+                </p>
+                <p class="lyric-line">Come meet me in the middle
+                    <span class="other-performer">(You and I will always be)</span>
+                </p>
+                <p class="lyric-line">Somewhere in between</span></p>
+                <p class="lyric-line">You and I will always be</span></p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <section id="footer-container">
+            <div class="footer-subgroup">
+                <h6 class="footer-subgroup-title">Artist</h6>
+                <p class="footer-subgroup-info">Anderson .Paak <span class="footer-extra-info">(main)</span>,
+                    J. Cole <span class="footer-extra-info">(feature)</span>
+                </p>
+            </div>
+            <div class="footer-subgroup">
+                <h6 class="footer-subgroup-title">Performers</h6>
+                <p class="footer-subgroup-info">Curt Chambers <span class="footer-extra-info">(bass)</span>,
+                    Kadhja Bonet <span class="footer-extra-info">(additional vocals)</span>
+                </p>
+            </div>
+            <div class="footer-subgroup">
+                <h6 class="footer-subgroup-title">Writing & Arrangement</h6>
+                <p class="footer-subgroup-info">J. Cole <span class="footer-extra-info">(composer)</span>,
+                    Chris Dave <span class="footer-extra-info">(composer)</span>,
+                    Curt Chambers <span class="footer-extra-info">(composer)</span>,
+                    Brandon Anderson <span class="footer-extra-info">(composer)</span>,
+                    Cleo Sample <span class="footer-extra-info">(composer)</span>,
+                </p>
+            </div>
+            <div class="footer-subgroup">
+                <h6 class="footer-subgroup-title">Production & Engineering</h6>
+                <p class="footer-subgroup-info">Chris Dave <span class="footer-extra-info">(producer)</span>,
+                    Dr. Dre <span class="footer-extra-info">(mixer)</span>,
+                    Jhair Lazo <span class="footer-extra-info">(engineer)</span>,
+                    Julio Ulloa <span class="footer-extra-info">(engineer)</span>,
+                    Lola A. Romero <span class="footer-extra-info">(engineer)</span>,
+                    Quentin Gilkey <span class="footer-extra-info">(engineer & mixer)</span>,
+                </p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
