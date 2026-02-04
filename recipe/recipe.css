@@ -1,0 +1,41 @@
+:root {
+  --black: #1f1f1f;
+  --white: #f7f7f7;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+
+
+/* ----- TYPOGRAPHY ----- */
+html{
+  font-size: 16pt;
+  color: var(--black);
+}
+
+h1#header-title {
+    text-transform: capitalize;
+}
+
+
+
+/* ----- IMAGING ----- */
+img.sample-img {
+    width: 250px;
+}
+
+/* ----- FORMATTING & Visuals ----- */
+body {
+    margin: 0px 0px 10px 0px;
+    padding: 40px 20px;
+    background-color: var(--white);
+}
+
+header#header {
+    margin-bottom: 30px;
+}
+
+section {
+    margin-bottom: 30px;
+}
