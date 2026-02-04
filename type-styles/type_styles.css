@@ -1,0 +1,121 @@
+:root {
+  --black: #1f1f1f;
+  --white: #f7f7f7;
+  --main-purple: #8F1ACE;
+  --med-purple: #CE98EB;
+  --light-purple: #F8EDFD;
+  --silver: #999999e8;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+/* ----- TYPOGRAPHY ----- */
+html{
+  font-size: 20pt;
+  color: var(--black);
+}
+.ubuntu {
+    font-family: "Ubuntu", sans-serif;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+
+header#header {
+    text-align: center;
+}
+h1#header-title {
+    color: var(--main-purple);
+    margin-bottom: 30px;
+}
+h2#font-fam-subtitle {
+    font-size: 1.3em;
+}
+h3#font-size-subtitle {
+    font-size: 1.15em;
+}
+span.ubuntu {
+    color: var(--med-purple);
+}
+
+h3.property-name {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .95em;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    word-spacing: 0.2em;
+}
+p.property-descr {
+    font-size: .7em;
+    margin-bottom: 5px;
+    color: var(--silver);
+}
+p.example-sentence {
+    font-size: .9em;
+}
+
+
+
+/* ----- IMAGING ----- */
+
+
+/* ----- FORMATTING & Visuals ----- */
+body {
+    margin: 0px 0px 10px 0px;
+    padding: 0px 0px 10px 0px;
+    background-color: var(--white);
+}
+
+header#header {
+    padding: 25px 15px;
+    margin: 40px 0px;
+}
+div#subtitle-div {
+    margin: 15px 0px;
+}
+h2#font-fam-subtitle {
+    margin-bottom: 5px;
+}
+
+main#main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 60px;
+    padding: 8px;
+}
+
+section.css-property-group {
+    width: fit-content;
+    border-radius: 20px;
+    background-color: var(--light-purple);
+    overflow: hidden;
+    max-width: 85%;
+}
+h3.property-name {
+    background-color: #8F1ACE;
+    padding: 15px 30px;
+    min-width: 105%;
+    min-height: 105%;
+    border: 3px solid var(--main-purple);
+}
+div.property-examples-group {
+    border: 3px solid var(--main-purple);
+    padding: 15px 50px;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+div.property-example {
+    margin-bottom: 25px;
+    &:first-child {
+        margin-top: 15px;
+    }
+}
+
+
