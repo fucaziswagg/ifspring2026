@@ -1,0 +1,8 @@
+img.portrait {
+    float: left;
+    margin: 0px 2rem 2rem 0px;
+}
+
+.instructions {
+    clear: both;
+}
