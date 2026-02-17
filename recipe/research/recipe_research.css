@@ -14,15 +14,40 @@ html{
   color: var(--black);
 }
 
+span.bold {
+    font-weight: bold;
+}
+span.italic {
+    font-style: italic;
+}
+
 h1#header-title {
     text-transform: capitalize;
 }
+header > div {
+    margin-top: .7rem;
+}
+header ul#header-list {
+    padding: 0;
+}
+
+li.block {
+    display: block;
+}
+li.ingredient-category {
+    margin-top: .5rem;
+}
+
+p.instruction-title {
+    margin-top: .5rem;
+}
+
 
 
 
 /* ----- IMAGING ----- */
 img.sample-img {
-    width: 250px;
+    width: 24%;
 }
 
 /* ----- FORMATTING & Visuals ----- */
