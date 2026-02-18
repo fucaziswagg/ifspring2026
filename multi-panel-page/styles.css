@@ -87,6 +87,8 @@ img#section-img {
     float: right;
     border: 1px solid white; /* fix */
     margin: 0px 0px 35px 45px; /* fix */
+    object-fit: cover;
+    object-position: center 30%;
 }
 
 img.grid-image {
@@ -102,6 +104,10 @@ img.grid-image {
 
 
 /* ----- FORMATTING & Visuals ----- */
+body {
+    margin: 0;
+}
+
 .parent-container {
     width: 100%;
     display: flex;
@@ -129,16 +135,16 @@ section.section {
 }
 section#section1 {
     padding: 50px 0px 35px 0px;
-    background-color: #09233A;
+    background-color: #183840;
 }
 section#section2 {
     padding-bottom: 60px;
-    background-color: #F0F0F0;
-    color: #464346;
+    background-color: #f9e5d4;
+    color: #183840;
 }
 section#section3 {
     padding-bottom: 100px;
-    background-color: #BC0114;
+    background-color: #b1686c;
 }
 
 div#grid {
@@ -158,5 +164,5 @@ div.grid-container {
 
 footer#footer {
     padding: 40px 40px 30px 192px;
-    background-color: #333333;
+    background-color: #190f0f;
 }
