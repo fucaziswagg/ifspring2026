@@ -1,0 +1,65 @@
+/* flex rules:
+  - justify content = items along main axis
+  - align items = items perpendicular main axis (single line)
+  - cross axis = group perpendicular main axis (multi line)
+        -- how rows spaced vertically, columns spaced horizontally
+*/
+
+/* grid rules:
+  - justify items = how items sit horizontally in cells
+  - align items = how items sit vertically in cells
+  - justify content = moves entire grid horizontally
+  - align content = moves entire grid vertically
+  
+  - can use both template columns and rows
+*/
+
+
+:root {
+  --black: #1f1f1f;
+  --white: #f7f7f7;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+/* ----- TYPOGRAPHY ----- */
+html{
+  font-size: 16pt;
+  color: var(--black);
+}
+
+.center-text {
+    text-align: center;
+}
+
+
+/* ----- IMAGING ----- */
+img {
+    border: 1.5px solid var(--black);
+}
+img.proto-image-comp {
+    width: 75%;
+    max-width: 700px;
+}
+img.proto-image-mobile {
+    width: 50%;
+    max-width: 400px;
+}
+
+
+/* ----- FORMATTING & Visuals ----- */
+body {
+    margin: 0px 0px 10px 0px;
+    padding: 0px 0px 10px 0px;
+    background-color: var(--white);
+}
+
+section.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+}
