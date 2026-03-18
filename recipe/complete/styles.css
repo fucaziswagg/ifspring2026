@@ -1,0 +1,67 @@
+/* 
+    dark green #48972D
+    light green #95CD46
+    dark red #961F0B
+    light red #D94517
+    light brown #F1A438
+*/
+
+:root {
+  --black: #1f1f1f;
+  --white: #f7f7f7;
+
+  --dg: #48972D;
+  --lg: #95CD46;
+  --dr: #961F0B;
+  --lr: #D94517;
+  --db: #442D0E;
+  --mb: #A16B20;
+  --lb: #d99b45;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* ----- TYPOGRAPHY ----- */
+html{
+  font-size: 14pt;
+  color: var(--black);
+}
+@media only screen and (max-width: 640px) {
+    html{
+        font-size: 12pt;
+    }
+}
+
+.chewy {
+    font-family: "Chewy", system-ui;
+}
+
+/* ----- FORMATTING & Visuals ----- */
+body#body {
+    background-color: var(--white);
+    font-family: "Open Sans", sans-serif;
+}
+
+
+
+/* ----- IMAGING ----- */
+.inset {
+  position: relative; /* create stacking context */
+}
+.inset::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 60px rgba(0,0,0,0.95);
+  z-index: 2; /* above the child image */
+  border-radius: inherit; /* match rounded corners if any */
+}
+
+.inset-child {
+  box-shadow: inset 0 0 60px rgba(0,0,0,0.95);
+  border-radius: inherit;
+}

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <meta name="author" content="Bean Royal">
+    <meta name="description" content="Build your recipe as a responsive, finished html page. Our goal is to translate your mockups into an actual webpage 
+        that will work visually on any device screen. Be aware that this may require significant compromises to your initial mockups, and that's okay. 
+        I'm not judging how accurately you reproduce your mockup. I would rather see a final layout that has evolved from your initial plans (if necessary) 
+        in order to work successfully in this new context.">
+    <meta name="copyright" content="2026 Bean Royal">
+    <meta name="generator" content="VS Code">
+    <meta name="rating" content="general">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chewy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/844a207ff7.js" crossorigin="anonymous"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="body">
+    <div id="page-container-full" class="w-full">
+
+        <nav id="nav" class="w-full bg-white shadow-md shadow-b">
+            <div id="nav-container" class="max-w-7xl mx-auto px-8 py-2 flex justify-between items-center">
+                <div class="flex items-center sm:hidden">
+                    <a href="#"><i class="fa-solid fa-bars fa-xl text-[#D94517] hover:text-[#961F0B]"></i></a>
+                </div>
+
+                <div class="flex items-center">
+                    <a href="#"><img src="images/Backyard BBQ Logo 2.png" class="h-[100px] max-[380px]:h-[80px]"></a>
+                </div>
+
+                <div class="justify-center font-medium hidden
+                gap-3 text-sm md:gap-8 md:text-base sm:flex">
+                    <a href="#" class="hover:text-[#d94517]">Recipes</a>
+                    <a href="#" class="hover:text-[#d94517]">News</a>
+                    <a href="#" class="hover:text-[#d94517]">Shop</a>
+                    <a href="#" class="hover:text-[#d94517]">About</a>
+                </div>
+
+                <div class="flex justify-end items-center 
+                gap-2 sm:gap-3">
+                    <input type="text" placeholder="Search" class="px-3 py-1.5 rounded-full text-sm 
+                    border border-gray-300 focus:border-[#d94517] outline-none shadow-md
+                    min-[835px]:w-40 max-[835px]:w-20 max-[835px]:text-center max-[380px]:hidden" />
+                    <a href="#"><i class="fa-solid fa-magnifying-glass fa-xl sm:fa-lg text-[#D94517] hover:text-[#961F0B]
+                        hidden max-[380px]:inline"></i></a>
+                    <a href="#"><i
+                            class="fa-regular fa-bookmark fa-xl sm:fa-lg text-[#D94517] hover:text-[#961F0B]"></i></a>
+                    <a href="#"><i
+                            class="fa-solid fa-circle-user fa-xl sm:fa-lg text-[#D94517] hover:text-[#961F0B]"></i></a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="page-container-center" class="max-w-7xl mx-auto px-8 py-6 space-y-12">
+            <div id="site-location-container" class="text-sm text-gray-600 flex gap-2">
+                <a href="#" class="hover:underline">Home</a>
+                <span>&gt;</span>
+                <a href="#" class="hover:underline">Recipes</a>
+                <span>&gt;</span>
+                <a href="#" class="hover:underline font-medium text-gray-800">3-2-1 Ribs</a>
+            </div>
+
+            <header id="header">
+                <div class="w-full rounded-2xl overflow-hidden border-4 border-[#961F0B] relative">
+                    <img src="images/ribs2.jpg" class="object-cover">
+                    <div class="absolute inset-0 shadow-[inset_0_0_15px_10px_rgba(0,0,0,0.55)]"></div>
+                </div>
+
+                <div class="flex flex-col items-center sm:block mx-auto">
+                    <div class="flex items-center justify-between px-8 mt-6 gap-6">
+                        <h1 id="recipe-title" class="text-4xl font-bold text-[#961F0B] chewy text-center">3-2-1 Oven
+                            Baked
+                            Ribs</h1>
+                        <button id="save-recipe-btn" class="px-4 py-2 bg-[#D94517] text-white rounded-full hover:bg-[#961F0B] 
+                    text-sm text-center font-medium items-center justify-around gap-2 hidden sm:flex">
+                            <i class="fa-regular fa-bookmark text-lg md:text-base"></i>
+                            <p class="hidden md:block">Save Recipe</p>
+                        </button>
+                    </div>
+
+                    <div id="author-name" class="text-gray-600 text-sm px-8 mt-2 text-center sm:text-left">
+                        Courtesy of: <span class="font-medium text-[var(--db)]">Chef Boyar-Bean</span>
+                    </div>
+
+                    <button id="save-recipe-btn" class="px-4 py-2 bg-[#D94517] text-white rounded-full hover:bg-[#961F0B] 
+                    text-sm text-center font-medium flex items-center justify-around gap-2 sm:hidden mt-5">
+                        <i class="fa-regular fa-bookmark"></i>
+                        <p class="">Save Recipe</p>
+                    </button>
+                </div>
+            </header>
+
+            <section id="recipe-details" class="w-full space-y-4">
+                <div id="recipe-details" class="border-y-2 border-gray-300 py-4">
+                    <div class="md:grid grid-cols-3 divide-x-2 divide-gray-300 text-center text-sm text-gray-700
+                    hidden">
+                        <div class="px-4">
+                            <div><span class="font-medium text-[#48972D]">Difficulty: </span>3.5 / 5</div>
+                            <div><span class="font-medium text-[#48972D]">Estimated Cost: </span>$30 - $45</div>
+                        </div>
+
+                        <div class="px-4">
+                            <div><span class="font-medium text-[#48972D]">Prep Time: </span>30 minutes</div>
+                            <div><span class="font-medium text-[#48972D]">Cook Time: </span>5 hours</div>
+                        </div>
+
+                        <div class="px-4">
+                            <div><span class="font-medium text-[#48972D]">Serving Size: </span>2-4 people</div>
+                            <div><a href="#" class="font-medium hover:underline text-[#D94517]">Nutrition Info</a></div>
+                        </div>
+                    </div>
+                    <div class="sm:grid grid-cols-2 divide-x-2 divide-gray-300 text-center text-sm text-gray-700
+                    hidden md:hidden">
+                        <div class="px-4">
+                            <div><span class="font-medium text-[#48972D]">Difficulty: </span>3.5 / 5</div>
+                            <div><span class="font-medium text-[#48972D]">Estimated Cost: </span>$30 - $45</div>
+                            <div><span class="font-medium text-[#48972D]">Serving Size: </span>2-4 people</div>
+                        </div>
+                        <div class="px-4">
+                            <div><span class="font-medium text-[#48972D]">Prep Time: </span>30 minutes</div>
+                            <div><span class="font-medium text-[#48972D]">Cook Time: </span>5 hours</div>
+                            <div><a href="#" class="font-medium hover:underline text-[#D94517]">Nutrition Info</a></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 divide-x-2 divide-gray-300 text-center text-sm text-gray-700
+                    sm:hidden">
+                        <div class="px-4">
+                            <div><span class="font-medium text-[#48972D]">Difficulty: </span>3.5 / 5</div>
+                            <div><span class="font-medium text-[#48972D]">Estimated Cost: </span>$30 - $45</div>
+                            <div><span class="font-medium text-[#48972D]">Prep Time: </span>30 minutes</div>
+                            <div><span class="font-medium text-[#48972D]">Cook Time: </span>5 hours</div>
+                            <div><span class="font-medium text-[#48972D]">Serving Size: </span>2-4 people</div>
+                            <div><a href="#" class="font-medium hover:underline text-[#D94517]">Nutrition Info</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-gray-700 text-sm sm:text-base">
+                    <span class="text-base sm:text-lg font-semibold text-[#48972D]">The 3-2-1 rib method</span>
+                    is a simple, time-tested approach for making tender,
+                    fall-off-the-bone pork ribs right in the oven. Named for its three cooking stages,
+                    this technique slowly bakes the ribs until they're deeply seasoned, perfectly caramelized,
+                    and effortlessly juicy. Even without a smoker, the low-and-slow process builds rich flavor
+                    and creates that classic barbecue texture. It's an approachable method for beginners
+                    and a reliable favorite for anyone who loves hearty, comforting ribs.
+                </div>
+            </section>
+
+            <main id="main" class="min-[467px]:grid min-[467px]:grid-cols-5 gap-8 mt-10
+            flex flex-col items-start justify-between">
+
+                <aside id="main-aside"
+                    class="col-span-2 xl:col-span-1 min-[467px]:border-r-2 border-gray-300 pr-6 space-y-8">
+                    <section id="ingredients-section">
+                        <h2 class="text-xl font-semibold text-[#442D0E] mb-3">Ingredients</h2>
+
+                        <h3 class="text-base text-gray-500 mb-2 mt-3">Core Items</h3>
+                        <ul class="space-y-2 text-xs xl:text-sm">
+                            <li>
+                                <label class="flex items-start gap-2 cursor-pointer select-none">
+                                    <input type="checkbox" class="peer sr-only">
+                                    <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                    w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                    peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                    <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                        1 rack, pork baby back ribs (2.5-3 lbs)</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <input type="checkbox" id="toggle" class="hidden peer">
+
+                        <span class="hidden min-[467px]:block peer-checked:block mb-2">
+                            <h3 class="text-base text-gray-500 mb-2 mt-3">Binders & Seasonings</h3>
+                            <ul class="space-y-2 text-xs xl:text-sm">
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            2-3 tablespoons, yellow mustard</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            1-2 teaspoons, liquid smoke</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            3-4 tablespoons, rib rub seasoning, or:</span>
+                                    </label>
+                                    <ul class="space-y-2 text-xs ml-4 mt-1">
+                                        <li class="text-xs">
+                                            <label class="flex items-start gap-2 cursor-pointer select-none">
+                                                <input type="checkbox" class="peer sr-only">
+                                                <i class="fa-solid fa-check fa-xs text-transparent peer-checked:text-white
+                                        w-4 h-4 px-1 border-2 border-gray-300 rounded-md flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                                <span
+                                                    class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                                    1 tablespoons, woodfired garlic powder</span>
+                                            </label>
+                                        </li>
+                                        <li class="text-xs">
+                                            <label class="flex items-start gap-2 cursor-pointer select-none">
+                                                <input type="checkbox" class="peer sr-only">
+                                                <i class="fa-solid fa-check fa-xs text-transparent peer-checked:text-white
+                                        w-4 h-4 px-1 border-2 border-gray-300 rounded-md flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                                <span
+                                                    class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                                    1 tablespoons, onion powder</span>
+                                            </label>
+                                        </li>
+                                        <li class="text-xs">
+                                            <label class="flex items-start gap-2 cursor-pointer select-none">
+                                                <input type="checkbox" class="peer sr-only">
+                                                <i class="fa-solid fa-check fa-xs text-transparent peer-checked:text-white
+                                        w-4 h-4 px-1 border-2 border-gray-300 rounded-md flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                                <span
+                                                    class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                                    1.5 teaspoons, paprika</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            2 tablespoons, sea salt</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            1.5 tablespoons, fresh ground black pepper</span>
+                                    </label>
+                                </li>
+                            </ul>
+
+                            <h3 class="text-base text-gray-500 mb-2 mt-3">Basting Mixture</h3>
+                            <ul class="space-y-2 text-xs xl:text-sm">
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            6 tablespoons, apple cider vinegar</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            2 tablespoons, butter (salted or unsalted)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            2 tablespoons, hot honey</span>
+                                    </label>
+                                </li>
+                            </ul>
+
+
+                            <h3 class="text-base text-gray-500 mb-2 mt-3">Tinfoil Spread</h3>
+                            <ul class="space-y-2 text-xs xl:text-sm">
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            2 tablespoons, softened butter (salted or unsalted)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            &frac14; cup, brown sugar</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                        w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                        peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            2-3 tablespoons, hot honey</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </span>
+
+                        <label for="toggle" class="cursor-pointer w-full mt-2 mx-auto text-center min-[467px]:hidden
+                        font-medium hover:text-[var(--dr)] hover:font-bold underline text-[#D94517] 
+                        flex items-start justify-center peer-checked:hidden text-sm">
+                            See All
+                        </label>
+                        <label for="toggle" class="cursor-pointer w-full mt-2 mx-auto text-center min-[467px]:hidden
+                        font-medium hover:text-[var(--dr)] hover:font-bold underline text-[#D94517] 
+                        flex items-center justify-center hidden peer-checked:inline text-sm">
+                            See Less
+                        </label>
+                    </section>
+
+                    <section id="equipment-section">
+                        <h2 class="text-xl font-semibold text-[#442D0E] mb-3">Equipment</h2>
+
+                        <ul class="space-y-2 text-xs xl:text-sm">
+                            <li>
+                                <label class="flex items-start gap-2 cursor-pointer select-none">
+                                    <input type="checkbox" class="peer sr-only">
+                                    <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                    w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                    peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                    <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                        paper towels</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-start gap-2 cursor-pointer select-none">
+                                    <input type="checkbox" class="peer sr-only">
+                                    <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                    w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                    peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                    <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                        baking sheet</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <input type="checkbox" id="toggle2" class="hidden peer">
+
+                        <span class="hidden min-[467px]:block peer-checked:block mb-2">
+                            <ul class="space-y-2 text-xs xl:text-sm mt-2">
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                    w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                    peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            tongues</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                    w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                    peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            tinfoil</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                    w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                    peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            mixing bowl</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                    w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                    peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            basting brush</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex items-start gap-2 cursor-pointer select-none">
+                                        <input type="checkbox" class="peer sr-only">
+                                        <i class="fa-solid fa-check fa-sm text-transparent peer-checked:text-white
+                                    w-4 h-4 xl:w-5 xl:h-5 px-2 border-2 border-gray-300 rounded-lg flex items-center justify-center
+                                    peer-checked:bg-[var(--lr)] peer-checked:border-[var(--lr)]"></i>
+                                        <span class="transition peer-checked:line-through peer-checked:text-gray-500">
+                                            chef's knife</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </span>
+
+                        <label for="toggle2" class="cursor-pointer w-full mt-2 mx-auto text-center min-[467px]:hidden
+                        font-medium hover:text-[var(--dr)] hover:font-bold underline text-[#D94517] 
+                        flex items-start justify-center peer-checked:hidden text-sm">
+                            See All
+                        </label>
+                        <label for="toggle2" class="cursor-pointer w-full mt-2 mx-auto text-center min-[467px]:hidden
+                        font-medium hover:text-[var(--dr)] hover:font-bold underline text-[#D94517] 
+                        flex items-center justify-center hidden peer-checked:inline text-sm">
+                            See Less
+                        </label>
+                    </section>
+                </aside>
+
+                <section id="instructions-container" class="col-span-3 xl:col-span-4 flex gap-6 flex-col">
+                    <h2 class="text-3xl font-semibold text-[var(--dr)] chewy">Instructions</h2>
+
+                    <div id="prep-div" class="space-y-3">
+                        <h3 class="text-2xl font-semibold text-[var(--db)]">Prep</h3>
+
+                        <div class="">
+                            <div class="md:float-right md:ml-6 mb-4 relative overflow-hidden
+                            rounded-2xl overflow-hidden border-4 border-[var(--dr)]
+                            lg:w-[350px] md:w-[200px] mw-full">
+                                <img src="images/prep.jpg" class="object-cover w-full">
+                                <div class="absolute inset-0 shadow-[inset_0_0_7.5px_5px_rgba(0,0,0,0.55)]"></div>
+                            </div>
+
+                            <ol class="list-decimal list-outside space-y-2 pl-8">
+                                <li class="-ml-4">
+                                    Preheat the oven to 275°F and line a baking sheet with foil
+                                </li>
+                                <li class="-ml-4">
+                                    Use a paper towel to remove the membrane from the back of the ribs
+                                    <div class="ml-5 text-sm text-[var(--lb)] italic">
+                                        *Optionally: use a chef's knife to trim off extra fat or other unwanted parts of
+                                        the ribs
+                                    </div>
+                                </li>
+                                <li class="-ml-4">
+                                    Rinse the ribs off with water in the sink, then pat them dry with a paper towel
+                                </li>
+                                <li class="-ml-4">
+                                    Cover both sides of the ribs in yellow mustard and liquid smoke
+                                </li>
+                                <li class="-ml-4">
+                                    Season all sides of the ribs with salt, pepper, and the rib rub, making sure to
+                                    season the meat side a bit heavier
+                                    <div class="ml-5 text-sm text-[var(--lb)] italic">
+                                        *The meat side is the side of the ribs with more meat. In the prep picture
+                                        above, the meat side is facing down
+                                        and the boney side is facing the camera
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div id="step1-div" class="space-y-3">
+                        <h3 class="text-2xl font-semibold text-[var(--db)]">Bake Low & Slow, Uncovered (the "3")</h3>
+
+                        <div class="">
+                            <div class="md:float-right md:ml-6 mb-4 relative overflow-hidden
+                            rounded-2xl overflow-hidden border-4 border-[var(--dr)]
+                            lg:w-[350px] md:w-[200px] mw-full">
+                                <img src="images/step1.jpg" class="object-cover w-full">
+                                <div class="absolute inset-0 shadow-[inset_0_0_7.5px_5px_rgba(0,0,0,0.55)]"></div>
+                            </div>
+
+                            <ol class="list-decimal list-outside space-y-2 pl-8">
+                                <li class="-ml-4">
+                                    Place the ribs onto the tinfoil lined baking sheet, meat side up
+                                </li>
+                                <li class="-ml-4">
+                                    Place the sheet on the center rack in the oven and let bake for 3 hours
+                                </li>
+                                <li class="-ml-4">
+                                    Mix apple cider vinegar, butter, and hot honey in a mixing bowl to make the basting mixture
+                                </li>
+                                <li class="-ml-4">
+                                    Use the basting brush to lightly brush the ribs with the basting mixture every 30 minutes while they bake
+                                </li>
+                            </ol>
+                        </div>
+
+                    </div>
+
+                    <div id="step2-div" class="space-y-3">
+                        <h3 class="text-2xl font-semibold text-[var(--db)]">Bake Low & Slow, Covered (the "2")</h3>
+
+                        <div class="">
+                            <div class="md:float-right md:ml-6 mb-4 relative overflow-hidden
+                            rounded-2xl overflow-hidden border-4 border-[var(--dr)]
+                            lg:w-[350px] md:w-[200px] mw-full">
+                                <img src="images/step2.jpg" class="object-cover w-full">
+                                <div class="absolute inset-0 shadow-[inset_0_0_7.5px_5px_rgba(0,0,0,0.55)]"></div>
+                            </div>
+
+                            <ol class="list-decimal list-outside space-y-2 pl-8">
+                                <li class="-ml-4">
+                                    While the ribs are still in the oven during the previous step, we will begin prepping for this phase
+                                </li>
+                                <li class="-ml-4">
+                                    Cut a section of tinfoil that is about 2.5x as long as the rack of ribs
+                                </li>
+                                <li class="-ml-4">
+                                    In the middle of this tinfoil spread softened butter, 
+                                    sprinkle brown sugar, and drizzle hot honey.
+                                    <div class="ml-5 text-sm text-[var(--lb)] italic">
+                                        *The tinfoil mixture spread should be about the size of the rack of ribs
+                                    </div>
+                                </li>
+                                <li class="-ml-4">
+                                    After the previous 3 hours of cooking is done, take the ribs out of the oven
+                                </li>
+                                <li class="-ml-4">
+                                    Use tongues to place the ribs meat-side down onto the previously prepared, new section of tinfoil
+                                </li>
+                                <li class="-ml-4">
+                                    Fully cover the ribs in the tinfoil
+                                    <div class="ml-5 text-sm text-[var(--lb)] italic">
+                                        *Add more pieces of tinfoil if necessary
+                                    </div>
+                                </li>
+                                <li class="-ml-4">
+                                    Discard the old tinfoil from the baking sheet, then place the now covered ribs onto the baking sheet, meat side down
+                                </li>
+                                <li class="-ml-4">
+                                    Return the ribs to the oven and let bake for 2 hours
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div id="step3-div" class="space-y-3">
+                        <h3 class="text-2xl font-semibold text-[var(--db)]">Let Crisp (the "1")</h3>
+
+                        <div class="">
+                            <div class="md:float-right md:ml-6 mb-4 relative overflow-hidden
+                            rounded-2xl overflow-hidden border-4 border-[var(--dr)]
+                            lg:w-[350px] md:w-[200px] mw-full">
+                                <img src="images/step3.jpg" class="object-cover w-full">
+                                <div class="absolute inset-0 shadow-[inset_0_0_7.5px_5px_rgba(0,0,0,0.55)]"></div>
+                            </div>
+
+                            <ol class="list-decimal list-outside space-y-2 pl-8">
+                                <li class="-ml-4">
+                                    After the previous 2 hours of cooking is done, remove the ribs from the oven
+                                </li>
+                                <li class="-ml-4">
+                                    Heat the oven to 325°F
+                                </li>
+                                <li class="-ml-4">
+                                    Uncover the ribs and discard the tinfoil. Then place the ribs onto the baking sheet, meat side up
+                                </li>
+                                <li class="-ml-4">
+                                    Once the oven has reached 325°F, return the ribs to the oven and let bake for 30 minutes to 1 hour
+                                    <div class="ml-5 text-sm text-[var(--lb)] italic">
+                                        *Be careful not to let the ribs burn as they crisp
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div id="serving-div" class="space-y-3">
+                        <h3 class="text-2xl font-semibold text-[var(--db)]">Serving</h3>
+
+                        <div class="">
+                            <div class="md:float-right md:ml-6 mb-4 relative overflow-hidden
+                            rounded-2xl overflow-hidden border-4 border-[var(--dr)]
+                            lg:w-[350px] md:w-[200px] mw-full">
+                                <img src="images/serve_resize.jpg" class="object-cover w-full">
+                                <div class="absolute inset-0 shadow-[inset_0_0_7.5px_5px_rgba(0,0,0,0.55)]"></div>
+                            </div>
+
+                            <ol class="list-decimal list-outside space-y-2 pl-8">
+                                <li class="-ml-4">
+                                    Remove the ribs from the oven and let rest for about 10 minutes
+                                    <div class="ml-5 text-sm text-[var(--lb)] italic">
+                                        *Optionally: use a basting brush to brush your favorite BBQ sauce onto the ribs
+                                    </div>
+                                </li>
+                                <li class="-ml-4">
+                                    Use a chef's knife to cut between each bone, making thin slices of ribs
+                                </li>
+                                <li class="-ml-4">
+                                    Place the slices onto a serving dish and serve. Enjoy!
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                </section>
+
+            </main>
+        </div>
+
+        <footer id="header" class="w-full mt-16 pt-10 bg-white">
+            <div id="related-pages" class="max-w-7xl mx-auto px-8">
+                <h2 class="text-lg font-semibold mb-4 text-center text-[var(--db)]">Related Recipes</h2>
+
+                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 text-sm text-[var(--lr)] text-center">
+                    <li class="flex justify-center"><a href="#" class="hover:underline">Homemade BBQ sauce</a>
+                    </li>
+                    <li class="flex justify-center"><a href="#" class="hover:underline">BBQ Chicken Poppers</a>
+                    </li>
+                    <li class="flex justify-center"><a href="#" class="hover:underline">Filipino Pork BBQ</a>
+                    </li>
+                    <li class="flex justify-center"><a href="#" class="hover:underline">BBQ Pineapple</a>
+                    </li>
+                    <li class="flex justify-center"><a href="#" class="hover:underline">Grilled Chiecken Legs</a>
+                    </li>
+                    <li class="flex justify-center"><a href="#" class="hover:underline">Honey BBQ Chicken Wings</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="footer-about" class="mx-auto px-8 bg-green-900 border-t-2 border-gray-700 py-10 mt-8">
+                <nav class="flex flex-wrap gap-x-6 gap-y-3 text-xs text-white justify-center">
+                    <a href="#" class="hover:underline">Site Map</a>
+                    <a href="#" class="hover:underline">Visitor Agreement</a>
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                    <a href="#" class="hover:underline">About</a>
+                    <a href="#" class="hover:underline">Help</a>
+                    <a href="#" class="hover:underline">Accessibility</a>
+                    <a href="#" class="hover:underline">Newsletters</a>
+                </nav>
+
+                <p class="text-xs text-gray-400 mt-6 text-center">
+                    © 2026 Bean Royal or its subsidiaries and affiliates. All rights reserved.
+                </p>
+            </div>
+
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
