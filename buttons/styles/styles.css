@@ -1,0 +1,310 @@
+:root {
+  /* --black: #1f1f1f;
+  --white: #f7f7f7; */
+
+  --hasbro-lb: #0098DB;
+  --hasbro-db: #003c69;
+
+  --moo-bgrnd: #ECEFED;
+  --moo-g: #122e1d;
+  --moo-lg: #2a4334;
+  --moo-llg: #00AC73;
+
+  --coke-r: rgb(244, 0, 7);
+  --coke-b: rgb(31, 56, 180);
+  /* png blue: #2851F6 */
+
+  --ebike-b: #00ADBB;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ---- HASBRO ----- */
+div#hasbro-container {
+    background-color: #651A52;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#005fad+0,000f3c+100 */
+    background: radial-gradient(ellipse at center,  #005fad 0%,#000f3c 100%);
+    justify-content: flex-end;
+}
+a#btn-hasbro {
+    padding: .75rem 1.5rem;
+    background-color: white;
+    border-radius: 9999px;
+    border: 2px solid #e5e7eb;
+    border-bottom: 8px solid var(--hasbro-lb);
+    box-shadow: 0 0 #000, 0 0 #000, 0 20px 25px -5px #0000001a,0 8px 10px -6px #0000001a;
+    width: 75%;
+    margin-bottom: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 1.2rem;
+
+    transition: background-color ease-in .35s, border-bottom-color ease-in .35s, box-shadow ease-in .35s;
+    transition: transform .35s ease, letter-spacing .2s ease;
+}
+a#btn-hasbro:hover {
+    background-color: var(--hasbro-lb);
+    border-bottom-color: var(--hasbro-db);
+    box-shadow: 0 0 #000, 0 0 #000, 0 4px 6px -1px #0098db, 0 2px 4px -2px #0098db;
+    transform: rotate(-2deg);
+    letter-spacing: 2px;
+}
+a#btn-hasbro:hover span {
+    transition: all .2s ease;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+a#btn-hasbro:hover span:nth-child(1), a#btn-hasbro:hover span:nth-child(6) {
+    transform: translateY(-1px);
+}
+a#btn-hasbro:hover span:nth-child(2), a#btn-hasbro:hover span:nth-child(5) {
+    transform: translateY(3px);
+}
+a#btn-hasbro:hover span:nth-child(3), a#btn-hasbro:hover span:nth-child(4) {
+    transform: translateY(7px);
+}
+
+
+/* ---- MOO ----- */
+div#moo-container {
+    background-color: var(--moo-bgrnd);
+}
+a#btn-moo {
+    padding: 0 1.875rem;
+    margin: 0;
+    background-color: var(--moo-g);
+    /* border: 0.0625rem solid transparent; */
+    border-radius: 0.1875rem;
+    height: 3rem;
+    outline: 0;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Trebuchet MS", sans-serif;
+    line-height: 1.875rem;
+    font-size: 1.25rem;
+    
+    transition: box-shadow .2s linear;
+}
+a#btn-moo span {
+    position: relative;
+    z-index: 2;
+}
+a#btn-moo:hover {
+    /* background-color: var(--moo-llg); */
+    box-shadow: 0 0.1875rem 0.625rem 0 rgba(75, 89, 109, .3);
+}
+/* fill bgrnd */
+a#btn-moo::before { 
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--moo-llg);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 2s ease .5s;
+    z-index: 1;
+}
+/* white bar */
+a#btn-moo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 5px; /* thickness of the white bar */
+    opacity: 1;
+    background: linear-gradient(to right,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.6) 60%,
+    rgba(255,255,255,0) 100%);
+    transform: translateX(-100%); /* start off-screen left */
+    z-index: 1;
+    filter: blur(2px) brightness(1.4);
+    box-shadow: 0 0 12px rgba(255,255,255,0.9);
+}
+a#btn-moo:hover::before {
+    /* transform: scaleX(1); */
+    animation: printFill 2.5s forwards .35s;
+}
+a#btn-moo:hover::after {
+    transition: transform 0.5s ease, left 1.5s ease;
+    transform: translateX(100%);
+    left: 100%;
+}
+@keyframes printFill {
+  0%   { transform: scaleX(0); }
+  20%  { transform: scaleX(0.60); }
+  30%  { transform: scaleX(0.60); }
+  
+  40%  { transform: scaleX(0.50); }
+  50%  { transform: scaleX(0.40); }
+  65%  { transform: scaleX(0.40); }
+
+  100% { transform: scaleX(1); }
+}
+
+
+/* ---- APPLE ----- */
+a#btn-apple {
+    padding: 12px 22px;
+    margin: 0;
+    background-color: black;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 980px;
+    outline: 0;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .5);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    overflow: hidden;
+    position: relative;
+    
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.24;
+    font-size: 17px;
+    letter-spacing: -0.022em;
+    font-weight: 400;
+    
+    transition: background-color .15s ease .1s, color .15s ease;
+}
+a#btn-apple:hover {
+    background-color: white;
+    color: black;
+}
+a#btn-apple i {
+    margin-bottom: 5px;
+}
+
+
+/* ---- Coke ----- */
+a#btn-coke {
+    padding: 20px 44px;
+    margin: 0;
+    background-color: var(--coke-r);
+    border-radius: 30px;
+    /* border: 5px solid black; */
+    outline: 0;
+    box-shadow: 0px 0px 8px 2px rgba(244, 0, 7, .5);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    overflow: hidden;
+    position: relative;
+    
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    white-space: nowrap;
+}
+.coke-button {
+    background: transparent;
+    background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
+    background-repeat: repeat-x;
+    background-position: 0 -80%;
+    transition: 2.5s ease;
+    
+    &:hover {
+        background-position: 500% 40%;
+    }
+}
+a#btn-coke:hover {
+    box-shadow: 0px 0px 8px 2px rgba(31, 56, 180, .5);
+    filter: hue-rotate(-18deg) brightness(85%) saturate(120%);
+}
+
+
+
+/* ---- Electra ----- */
+a#btn-ebike {
+    padding: 14px 24px;
+    margin: 0;
+    background: var(--ebike-b);
+    border: 0;
+    border-radius: 8px;
+    outline: 0;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .5);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Yellowtail", cursive;
+    font-size: 28px;
+    
+    transition: transform 0.3s ease, border-radius 0.3s ease;
+    transform: skewX(0deg);
+}
+a#btn-ebike:hover {
+    /* background-color: white;
+    color: black; */
+    transform: skewX(-28deg); /* rhombus tilt */
+    border-radius: 4px;
+}
+a#btn-ebike::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/motion.png"); /* or gradient pattern */
+    background-size: 50% 30%;
+    background-repeat: repeat;
+    opacity: 0;
+    z-index: 0;
+
+    /* IMPORTANT: no animation here */
+    animation: none;
+}
+a#btn-ebike:hover::before {
+    z-index: 1;
+    opacity: 1;
+    animation: drift 3s linear infinite
+}
+@keyframes drift {
+    from { background-position: -100px 0; }
+    to   { background-position: 2000px 0; }
+}
+
