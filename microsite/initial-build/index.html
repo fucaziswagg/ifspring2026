@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>microsite initial build</title>
+    <meta name="author" content="Bean Royal">
+    <meta name="description"
+        content="Per your notes from your Creative Director and your revised mockup, build your microsite as HTML. 
+  Present a first draft for review. At minimum this is all of the content structured in HTML, but not necessarily styled.">
+    <meta name="copyright" content="2026 Bean Royal">
+    <meta name="generator" content="VS Code">
+    <meta name="rating" content="general">
+    <link rel="stylesheet" type="text/css" href="general_styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="tracing.css"> -->
+    <link rel="stylesheet" type="text/css" href="index_styles.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <aside id="popup-menu">
+        <div id="menu-container">
+            <i class="fa-solid fa-xmark"></i>
+            <img src="../images/monarch nav title resize.png" id="menu-site-title" alt="discovering monarchs logo">
+
+            <div id="menu-links">
+                <a class="menu-link" href="index.html">home</a>
+                <a class="menu-link" href="inner-pages/about.html">learn more</a>
+                <a class="menu-link" href="inner-pages/conservation.html">conservation efforts</a>
+                <a class="menu-link" href="inner-pages/interaction.html">human interaction</a>
+                <a class="menu-link" href="inner-pages/lifecycle.html">lifecycle</a>
+                <a class="menu-link" href="inner-pages/habitat.html">habitat</a>
+                <a class="menu-link" href="inner-pages/dangers.html">dangers</a>
+                <a class="menu-link" href="inner-pages/contact.html">contact</a>
+            </div>
+
+            <div id="menu-bottom">
+                <form action="popups/involved_popup.html">
+                    <button id="menu-button" class="my-btn section-btn yellow-btn">get involved</button>
+                </form>
+                <div id="menu-socials">
+                    <a>
+                        <img class="social-icon" alt="facebook icon" src="../images/facebook.png">
+                    </a>
+                    <a>
+                        <img class="social-icon" alt="instagram icon" src="../images/instagram.png">
+                    </a>
+                    <a>
+                        <img class="social-icon" alt="tiktok icon" src="../images/tiktok.png">
+                    </a>
+                    <a>
+                        <img class="social-icon" alt="youtube icon" src="../images/youtube.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div id="body-container">
+        <nav id="nav">
+            <a id="site-title-link" href="index.html">
+                <img src="../images/monarch nav title resize.png" id="nav-site-title" alt="discovering monarchs logo">
+            </a>
+
+            <div id="nav-btns">
+                <button id="nav-btn" class="my-btn">
+                    <i id="nav-icon" class="fa-solid fa-bars fa-3x"></i>
+                </button>
+                <form action="popups/involved_popup.html">
+                    <button id="cta-nav-btn" class="my-btn yellow-btn">
+                        get involved
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+        <main id="main">
+            <header id="header" class="section-container">
+                <div class="section-content-container">
+                    <div class="title-group">
+                        <h3 class="top-title title">the complete guide to</h3>
+                        <h1 class="bottom-title title">monarchs</h1>
+                    </div>
+                    <div class="text-group">
+                        <p>Monarch butterflies are some of the most recognizable insects in North America, known for
+                            their bright orange wings patterned with black and white. Even though they look delicate,
+                            monarchs are incredible travelers. Every year, millions of them migrate thousands of
+                            miles—from the northern United States and Canada all the way to Mexico or coastal
+                            California—to escape the cold and survive the winter. Their journey is one of the longest
+                            and most amazing migrations of any insect on Earth.</p>
+                        <p>Monarchs rely on milkweed plants to survive, and changes in our environment have made their
+                            lives harder. By learning about these butterflies and the challenges they face, we can all
+                            play a part in protecting them. Whether you're a lifelong nature lover or just discovering
+                            these beautiful creatures, this site will guide you through their world and show how simple
+                            actions can help keep monarchs thriving for generations to come.</p>
+                    </div>
+                    <button class="my-btn section-btn green-btn">learn more</button>
+                </div>
+
+                <img id="header-img" class="section-img" src="../images/header image.png"
+                    alt="monarch butterfly on a flower">
+            </header>
+
+            <section id="section2" class="section-container">
+                <div id="section2-top-container">
+                    <div id="section2-container" class="section-content-container">
+                        <img id="section2-img" src="../images/double monarch.png" alt="2 monarchs perched">
+                        <div class="title-group">
+                            <h3 class="top-title title">conservation</h3>
+                            <h1 class="bottom-title title">efforts</h1>
+                        </div>
+                        <div class="text-group">
+                            <p>On July 20, 2022, the International Union for Conservation of Nature added the migratory
+                                monarch butterfly (the subspecies common in North America) to its red list as an
+                                endangered
+                                species. However, a petition in 2023 resulted in its status being changed to
+                                "vulnerable".
+                            </p>
+                            <p>The monarch butterfly is not listed under the Convention on International Trade in
+                                Endangered
+                                Species of Wild Fauna and Flora or specifically protected under federal laws in the
+                                United
+                                States.</p>
+                            <p>Although the numbers of breeding monarchs in eastern North America have not decreased,
+                                reports of declining numbers of overwintering butterflies have inspired efforts to
+                                conserve
+                                the species.</p>
+                        </div>
+                        <button class="my-btn section-btn orange-btn">join the cause</button>
+                    </div>
+                </div>
+                <div id="section2-bottom-container">
+                    <div id="fed-square" class="section2-square">
+                        <img src="../images/federal.png" class="square-img" alt="federal building icon">
+                        <p class="square-text">federal actions</p>
+                    </div>
+                    <div id="local-square" class="section2-square">
+                        <img src="../images/gavel.png" class="square-img" alt="local government building icon">
+                        <p class="square-text">local government actions</p>
+                    </div>
+                    <div id="research-square" class="section2-square">
+                        <img src="../images/computer.png" class="square-img" alt="computer icon">
+                        <p class="square-text">research programs</p>
+                    </div>
+                    <div id="station-square" class="section2-square">
+                        <img src="../images/waystation.png" class="square-img" alt="way station icon">
+                        <p class="square-text">way stations</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section3" class="section-container">
+                <img id="section3-img" class="section-img" src="../images/hand monarch.png"
+                    alt="monarch butterfly on hand">
+
+                <div class="section-content-container">
+                    <div class="title-group">
+                        <h3 class="top-title title">human</h3>
+                        <h1 class="bottom-title title">interaction</h1>
+                    </div>
+                    <div class="text-group">
+                        <p>Humans interact with monarchs when rearing them in captivity, which has become increasingly
+                            popular. While risks occur in this controversial activity, captive rearing has many positive
+                            aspects. Homeowners are increasingly establishing butterfly gardens; monarchs can be
+                            attracted by cultivating a butterfly garden with specific milkweed species and nectar
+                            plants.</p>
+                        <p>Whether you are a land owner, educator, business, or activist - you can help by valuing and
+                            protecting Milkweed along the Monarch's migration route.
+                            By making a donation to programs, you can help aid research, planting, and cultivating of
+                            additional habitats.</p>
+                    </div>
+                    <button class="my-btn section-btn green-btn">how to help</button>
+                </div>
+            </section>
+
+            <footer id="footer">
+                <div id="footer-links">
+                    <a class="footer-link">discovering monarchs</a>
+                    <a class="footer-link">learn more</a>
+                    <a class="footer-link">join the cause</a>
+                    <a class="footer-link">how to help</a>
+                    <a class="footer-link" href="https://en.wikipedia.org/wiki/Monarch_butterfly#">references</a>
+                    <a class="footer-link">contact</a>
+                </div>
+
+                <div id="footer-btns">
+                    <button class="my-btn footer-btn yellow-btn">get involved</button>
+                    <button class="my-btn footer-btn green-btn">donate</button>
+                    <!-- https://www.paypal.com/donate/?hosted_button_id=9X59P2XNC8KCA -->
+                </div>
+
+                <div id="footer-bottom">
+                    <div id="socials">
+                        <a>
+                            <img class="social-icon" alt="facebook icon" src="../images/facebook.png">
+                        </a>
+                        <a>
+                            <img class="social-icon" alt="instagram icon" src="../images/instagram.png">
+                        </a>
+                        <a>
+                            <img class="social-icon" alt="tiktok icon" src="../images/tiktok.png">
+                        </a>
+                        <a>
+                            <img class="social-icon" alt="youtube icon" src="../images/youtube.png">
+                        </a>
+                    </div>
+                    <p>© 2026 bean royal, discovering monarchs, and associates. all rights reserved.</p>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="https://kit.fontawesome.com/844a207ff7.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

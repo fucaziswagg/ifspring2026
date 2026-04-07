@@ -1,0 +1,141 @@
+/* Color Palette
+main orange (dc571f)
+dark orange (65302a)
+faded orange (b45539)
+yellow (e7b459)
+light green (adb27a)
+main green (697a44)
+light gray (C0C1C5)
+white this (EFF0EB)
+faded black (2F3237)
+black (2D2D2F)
+main orange (E86707)
+blue (15185E)
+faded orange (b45539)
+yellow (FBC900)
+main green (517208)
+light brown (BD8A13)
+dark brown (74611E) */
+
+:root {
+    --black: #1f1f1f;
+    --white: #ffffff;
+    --lt-gray: #C0C1C5;
+    --lt-black: #2D2D2F;
+    --fd-black: #2F3237;
+    --fd-white: #EFF0EB;
+
+    --lt-orange: #E86707;
+    --orange: #dc571f;
+    --dk-orange: #65302a;
+    --fd-orange: #b45539;
+    --lt-yellow: #FBC900;
+    --dk-yellow: #e7b459;
+    --dk2-yellow: #e59500;
+    --lt-green: #517208;
+    --dk-green: #697a44;
+    --fd-green: #adb27a;
+    --blue: #15185E;
+    --lt-brown: #BD8A13;
+    --dk-brown: #74611E;
+
+    --lg-btn-txt: 24px;
+    --btn-txt: 14px;
+    --top-title-txt: 24px;
+    --bottom-title-txt: 48px;
+    --main-txt: 16px;
+    --heading-txt: 20px;
+    --footer-txt: 14px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+/* ----- TYPOGRAPHY ----- */
+html{
+    font-size: 16pt;
+    color: var(--black);
+}
+
+body {
+    /* margin: 0px 0px 10px 0px;
+    padding: 0px 0px 10px 0px; */
+    margin: 0;
+	padding: 0;
+    /* background-color: lightpink; */
+    background-color: var(--fd-white);
+}
+
+/* buttons */
+button:hover {
+    cursor: pointer;
+}
+button.my-btn {
+    border: 5px solid var(--fd-black);
+    border-radius: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+button.section-btn {
+    max-width: fit-content;
+    padding: 15px 50px;
+    font-size: var(--btn-txt);
+    font-weight: 600;
+}
+button.footer-btn {
+    padding: 15px 50px;
+    font-size: var(--btn-txt);
+    font-weight: 600;
+}
+button.green-btn {
+    background-color: var(--lt-green);
+    color: var(--white);
+    &:hover {
+        background-color: var(--dk-brown);
+    }
+}
+button.orange-btn {
+    background-color: var(--lt-orange);
+    color: var(--white);
+    &:hover {
+        background-color: var(--fd-orange);
+    }
+}
+button.yellow-btn {
+    background-color: var(--lt-yellow);
+    color: var(--lt-black);
+    &:hover {
+        background-color: var(--dk2-yellow);
+        color: var(--white);
+    }    
+}
+/* links */
+a {
+    cursor: pointer;
+    color: var(--white);
+}
+
+/* titles & text */
+div.title-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h3.top-title {
+    font-size: var(--top-title-txt);
+}
+h1.bottom-title {
+    font-size: var(--bottom-title-txt);
+}
+div.text-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    font-size: var(--main-txt);
+}
