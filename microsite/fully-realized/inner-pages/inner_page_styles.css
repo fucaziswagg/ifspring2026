@@ -1,0 +1,106 @@
+:root {
+    --mrg-btm: 70px;
+    --bottom-title-bigger-txt: 64px;
+    --pdx: 40px;
+    --subhead-txt: 12px;
+    --subsubhead-text: 12px;
+}
+
+
+/* ----- IMAGING ----- */
+img#header-img {
+    max-height: 240px;
+    opacity: 0;
+    transform: translate(-200px, 200px) scale(0.3); /* start off-screen + small */
+    transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+}
+img#header-img.fly-in {
+    opacity: 1;
+    transform: translate(0, 0) scale(1); /* final position + full size */
+}
+
+
+figure#main-figure {
+    width: 100%;
+    margin-bottom: var(--mrg-btm);
+}
+img#main-img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 0;
+    transform: rotateX(80deg) translateY(40px);
+    transform-origin: bottom; /* makes the flip look natural */
+    transition: transform 1.5s ease, opacity .5s ease;
+    &.full-height {
+        height: 100%;
+    }
+}
+img#main-img.reveal {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0);
+}
+
+
+/* ----- TYPOGRAPHY ----- */
+h1.bottom-title-bigger {
+    font-size: var(--bottom-title-bigger-txt);
+}
+h2.subheading {
+    text-transform: capitalize;
+    font-size: var(--top-title-txt);
+}
+h4.sub-subheading {
+    text-transform: capitalize;
+    font-size: var(--heading-txt);
+}
+
+
+/* ----- FORMATTING & Visuals ----- */
+nav#nav {
+    margin-bottom: 0 !important;
+}
+
+div#body-container {
+    max-width: 1440px;
+    width: 100%;
+    justify-self: center;
+    background-color: var(--fd-white);
+    margin: auto;
+    /* min-height: 100vh; */
+}
+
+header#body-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-bottom: 5px solid var(--orange);
+    margin-bottom: var(--mrg-btm);
+    background-color: var(--white);
+    padding: 0px var(--pdx) 20px var(--pdx);
+    flex-wrap: nowrap;
+}
+
+main#main {
+    padding: 0px var(--pdx) 0px var(--pdx);
+}
+
+section.main-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+    background-color: var(--white);
+    padding: var(--pdx) var(--pdx);
+    margin-bottom: var(--mrg-btm);
+    > :nth-child(1) {
+        border-left: 5px solid var(--orange);
+        padding-left: 20px;
+    }
+    &:nth-child(n+2) > :first-child {
+        border-left: 5px solid var(--lt-green);
+        padding-left: 20px;
+    }
+}

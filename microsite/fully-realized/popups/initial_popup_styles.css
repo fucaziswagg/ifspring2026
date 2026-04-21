@@ -1,0 +1,82 @@
+/* body::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    filter: blur(3px);
+    background-image: url(../../images/many\ monarchs.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+} */
+/* body {
+    overflow: hidden;
+} */
+
+.hidden {
+    display: none;
+}
+
+section#initial-popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow-y: none;
+
+    opacity: 0;
+    transition: opacity 1s .5s;
+}
+section#initial-popup.show {
+    display: block;
+    opacity: 1;
+}
+section#initial-popup::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    filter: blur(3px);
+    background-image: url(../../images/many\ monarchs.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+div#popup-outer-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+}
+
+div#popup-inner-container {
+    background-color: var(--white);
+    max-width: 70vw;
+    margin: 50px auto;
+    padding: 50px 65px;
+    text-align: center;
+}
+
+header#popup-header {
+    margin-bottom: 35px;
+}
+div#popup-main > * {
+    margin-bottom: 35px;
+}
+
+ul#popup-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: var(--main-txt);
+}
+
+div#popup-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    justify-items: auto;
+    align-items: center;
+    button {
+        width: 100%;
+    }
+}

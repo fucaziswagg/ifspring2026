@@ -1,0 +1,151 @@
+:root {
+    --mrg-btm: 70px;
+}
+
+/* ----- TYPOGRAPHY ----- */
+
+
+/* ----- IMAGING ----- */
+img#header-img {
+    max-width: 533px;
+}
+img#section2-img {
+    max-width: 205px;
+    position: absolute;
+    right: -75px;
+    top: -80px;
+}
+img.square-img {
+    max-height: 145px;
+    height: auto;
+    /* width: 100%; */
+    object-fit: contain;
+}
+img#section3-img {
+    max-width: 580px;
+}
+img.section-img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+/* ----- FORMATTING & Visuals ----- */
+div#body-container {
+    max-width: 1440px;
+    width: 100%;
+    justify-self: center;
+    background-color: var(--fd-white);
+    margin: auto;
+    /* min-height: 100vh; */
+}
+
+
+/* SECTIONS */
+/* header */
+header#header {
+    background-color: var(--white);
+}
+
+/* section 2 */
+section#section2 {
+    margin: 0;
+    padding: 0;
+    border-top: 5px solid var(--orange);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: var(--mrg-btm);
+}
+div#section2-top-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -5px;
+        filter: blur(5px);
+        background-image: url(../images/flower\ banner.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+div#section2-container {
+    max-width: 800px;
+    margin: 83px auto;
+    padding: 30px 40px;
+    position: relative;
+}
+div#section2-bottom-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    justify-items: center;
+    align-items: stretch;
+    width: 100%;
+}
+div.section2-square {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    row-gap: 50px;
+    aspect-ratio: 1/1;
+}
+div.section2-square > p.square-text {
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: var(--heading-txt);
+    text-align: center;
+    font-weight: 600;
+}
+div#fed-square {
+    background-color: var(--dk-orange);
+}
+div#local-square {
+    background-color: var(--orange);
+}
+div#research-square {
+    background-color: var(--fd-orange);
+}
+div#station-square {
+    background-color: var(--dk-green);
+}
+
+/* section 3 */
+section#section3 {
+    background-color: var(--white);
+    margin-bottom: var(--mrg-btm);
+}
+
+/* general section boxes */
+.section-container {
+    /* background-color: lightblue; */
+    /* border: 2px solid black; */
+
+    margin: 0 33px;
+    padding: 20px 40px 0px 40px;
+    /* padding: 20px 40px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+}
+div.section-content-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--white);
+}
