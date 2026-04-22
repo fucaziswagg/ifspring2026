@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>microsite initial build contact</title>
+  <meta name="author" content="Bean Royal">
+  <meta name="description" content="microsite content">
+  <meta name="copyright" content="2026 Bean Royal">
+  <meta name="generator" content="VS Code">
+  <meta name="rating" content="general">
+
+  <link rel="stylesheet" type="text/css" href="../general_styles.css">
+  <link rel="stylesheet" type="text/css" href="../header_footer_aside_styles.css">
+  <link rel="stylesheet" type="text/css" href="../popups/involved_popup.css">
+  <link rel="stylesheet" type="text/css" href="inner_page_styles.css">
+  <link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+
+<body>
+  <dialog id="involved-container">
+    <i id="involved-x" class="fa-solid fa-xmark"></i>
+    <header id="involved-header">
+      <h1 class="bottom-title">How to Contribute</h1>
+    </header>
+
+    <div id="involved-main">
+      <div>
+        <h3 class="top-title">Western Monarch Thanksgiving Count:</h3>
+        <p>From November to January, volunteers observe numbers and milkweed availability in California
+          overwintering sites.
+          <br>
+          Visit <a class="involved-link" href="https://westernmonarchcount.org/volunteer/">westernmonarchcount.org</a>
+          to get
+          involved.
+        </p>
+      </div>
+      <div>
+        <h3 class="top-title">Western Monarch Milkweed Mapper:</h3>
+        <p>Online or via an approved mobile application. Monarch migratory routes on the West coast stretch from
+          Southern California to Washington State. Highest priority is in early spring.
+          <br>
+          Visit <a class="involved-link" href="https://www.monarchmilkweedmapper.org/">monarchmilkweedmapper.org</a> to
+          get involved
+        </p>
+      </div>
+    </div>
+  </dialog>
+
+  <aside id="popup-menu">
+    <div id="menu-container">
+      <i id="menu-x" class="fa-solid fa-xmark"></i>
+      <img src="../../images/monarch nav title resize.png" id="menu-site-title" alt="discovering monarchs logo">
+
+      <div id="menu-links">
+        <a class="menu-link" href="../index.html">home</a>
+        <a class="menu-link" href="about.html">learn more</a>
+        <a class="menu-link" href="conservation.html">conservation efforts</a>
+        <a class="menu-link" href="interaction.html">human interaction</a>
+        <a class="menu-link" href="lifecycle.html">lifecycle</a>
+        <a class="menu-link" href="habitat.html">habitat</a>
+        <a class="menu-link" href="dangers.html">dangers</a>
+        <a class="menu-link" href="#">contact</a>
+      </div>
+
+      <div id="menu-bottom">
+        <form>
+          <button id="menu-button" class="my-btn section-btn yellow-btn involved-btn">get involved</button>
+        </form>
+        <div id="menu-socials">
+          <a>
+            <img class="social-icon" alt="facebook icon" src="../../images/facebook.png">
+          </a>
+          <a>
+            <img class="social-icon" alt="instagram icon" src="../../images/instagram.png">
+          </a>
+          <a>
+            <img class="social-icon" alt="tiktok icon" src="../../images/tiktok.png">
+          </a>
+          <a>
+            <img class="social-icon" alt="youtube icon" src="../../images/youtube.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div id="popup-overlay"></div>
+
+  <div id="body-container">
+    <nav id="nav">
+      <a id="site-title-link" href="../index.html">
+        <img src="../../images/monarch nav title resize.png" id="nav-site-title" alt="discovering monarchs logo">
+      </a>
+
+      <div id="nav-btns">
+        <button id="nav-btn" class="my-btn">
+          <i id="nav-icon" class="fa-solid fa-bars fa-3x"></i>
+        </button>
+        <form>
+          <button id="cta-nav-btn" class="my-btn yellow-btn involved-btn">
+            get involved
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <header id="body-header">
+      <div class="title-group title">
+        <h3 class="top-title">get in</h3>
+        <h1 class="bottom-title-bigger">Contact</h1>
+      </div>
+
+      <img id="header-img" src="../../images/inner/contact header.png" alt="monarch butterfly">
+    </header>
+
+    <main id="main">
+      <div id="main-container">
+        <section class="contact-section">
+
+          <h2 class="subheading">reach out!</h2>
+
+          <form class="contact-form" autocomplete="off" novalidate>
+            <div class="form-row">
+              <input type="text" id="first" name="first" placeholder="First Name">
+            </div>
+
+            <div class="form-row">
+              <input type="text" id="last" name="last" placeholder="Last Name">
+            </div>
+
+            <div class="form-row full">
+              <input type="text" id="email" name="email" placeholder="Email Address"></input>
+            </div>
+
+            <div class="form-row full">
+              <input type="text" id="phone" name="phone" placeholder="Phone Number" inputmode="numeric" pattern="[0-9]*"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"></input>
+            </div>
+
+            <div class="form-row full">
+              <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            </div>
+
+            <div class="form-row full">
+              <button type="submit" class="my-btn section-btn green-btn">Send Message</button>
+            </div>
+          </form>
+        </section>
+
+        <figure id="main-figure">
+          <img id="main-img" class="full-height" alt="monarch butterflies"
+            src="../../images/inner/contact main img.jpg">
+        </figure>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div id="footer-links">
+        <a class="footer-link" href="../index.html">discovering monarchs</a>
+        <a class="footer-link" href="about.html">learn more</a>
+        <a class="footer-link" href="conservation.html">join the cause</a>
+        <a class="footer-link" href="interaction.html">how to help</a>
+        <a class="footer-link" href="https://en.wikipedia.org/wiki/Monarch_butterfly#">references</a>
+        <a class="footer-link" href="#">contact</a>
+      </div>
+
+      <div id="footer-btns">
+        <form>
+          <button class="my-btn footer-btn yellow-btn involved-btn">get involved</button>
+        </form>
+        <form action="https://www.paypal.com/ncp/payment/AQEYWV8TZYUSE" target="_blank" method="GET">
+          <button class="my-btn footer-btn green-btn">donate</button>
+        </form>
+      </div>
+
+      <div id="footer-bottom">
+        <div id="socials">
+          <a>
+            <img class="social-icon" alt="facebook icon" src="../../images/facebook.png">
+          </a>
+          <a>
+            <img class="social-icon" alt="instagram icon" src="../../images/instagram.png">
+          </a>
+          <a>
+            <img class="social-icon" alt="tiktok icon" src="../../images/tiktok.png">
+          </a>
+          <a>
+            <img class="social-icon" alt="youtube icon" src="../../images/youtube.png">
+          </a>
+        </div>
+        <p>© 2026 bean royal, discovering monarchs, and associates. all rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://kit.fontawesome.com/844a207ff7.js" crossorigin="anonymous"></script>
+  <script src="../general.js"></script>
+  <script src="inner-page.js"></script>
+</body>
+
+</html>

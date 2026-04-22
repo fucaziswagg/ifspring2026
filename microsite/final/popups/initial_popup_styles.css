@@ -1,0 +1,117 @@
+
+.hidden {
+    display: none;
+}
+
+section#initial-popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow-y: hidden;
+    z-index: 1;
+
+    opacity: 0;
+    transition: opacity 1s .5s;
+}
+section#initial-popup.show {
+    display: block;
+    opacity: 1;
+}
+section#initial-popup::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    filter: blur(3px);
+    background-image: url(../../images/many\ monarchs.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+div#popup-outer-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+}
+@media only screen and (min-width: 1441px) {
+    div#popup-outer-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        > div#popup-inner-container {
+            max-width: 1500px;
+            margin: 50px 180px;
+        }
+    }
+}
+
+div#popup-inner-container {
+    background-color: var(--white);
+    max-width: 75vw;
+    margin: 50px auto;
+    padding: 50px 65px;
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+    div#popup-inner-container {
+        align-self: center;
+        padding: 50px 40px;
+        min-width: 90%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    div#popup-inner-container {
+        padding: 30px 20px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    div#popup-inner-container {
+        min-width: 100%;
+        margin: 50px 0;
+    }
+}
+
+header#popup-header {
+    margin-bottom: 35px;
+}
+div#popup-main > * {
+    margin-bottom: 35px;
+}
+
+ul#popup-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: var(--main-txt);
+}
+
+div#popup-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    justify-items: auto;
+    align-items: center;
+    form {
+        height: 100%;
+    }
+    button {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    div#popup-btns {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        max-width: fit-content;
+        margin: auto;
+        form {
+            width: 100%;
+        }
+        button {
+            text-wrap: nowrap;
+        }
+    }
+}

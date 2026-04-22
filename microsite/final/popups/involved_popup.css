@@ -1,0 +1,52 @@
+dialog#involved-container {
+    background-color: var(--white);
+    margin: auto;
+    padding: 50px 65px;
+    text-align: center;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+@media only screen and (min-width: 800px) {
+    dialog#involved-container {
+        max-width: 75vw;
+    }
+}
+@media only screen and (max-width: 660px) {
+    dialog#involved-container {
+        padding: 30px;
+    }
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+}
+
+i#involved-x {
+    float: right;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+    &:hover {
+        color: var(--dk-orange);
+    }
+}
+
+div#involved-main a.involved-link {
+    color: var(--lt-green);
+    &:hover {
+        color: var(--orange);
+    }
+}
+
+header#involved-header {
+    margin-bottom: 35px;
+    clear: both;
+}
+
+div#involved-main > div {
+    margin-bottom: 25px;
+    > h3 {
+        margin-bottom: 10px;
+    }
+}
