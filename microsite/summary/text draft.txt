@@ -1,0 +1,64 @@
+--- CREATION OF THE MICROSITE ---
+
+For this microsite, I had the role of project designer / developer. 
+In order to create a great site, I knew I needed to get a great grasp 
+of the idea my creative director, Charlotte Newhouse, had in mind. This 
+meant first reading through and analyzing her creative brief and content 
+outline, and then asking lots of questions during our initial meeting. 
+I wanted to understand the tone she wanted to convey, the purpose of the 
+site, how she wanted the visuals to look, etc; just her overall vision.
+
+Once I understood the direction Charlotte wanted to go in, I now needed to 
+understand the content I had to work with, as I was not familiar with the topic
+of march butterflies whatsoever. For this, I refered to the wikipedia
+page she provided me with as well her content outline. There was a lot of 
+information there, so my initial goal was just to organize the content into 
+general categories, and remove irrelevant sections.
+
+These two steps combined helped me come up with how I needed to present 
+the information I'd gather about monarch butterflies to fit Charlotte's 
+creative vision.
+
+--- tools, tactics, process ----
+
+The first step I took in the creative process was to design what the site
+would look and feel like. For this step I utilized figma, and created the
+mockup of the home page, as you see here. I researched a lot of other 
+conservation websites to help me get started, and keep some C.R.A.P. 
+principles in mind. I also outline my color pallete, size guide, and site
+directory.
+
+The next step was to develop an actual working prototype, and for this I used
+VS code. I used the tracing technique that we used in a previous assignment;
+I downloaded a full-scale image of my mockup and coded my prototype to look
+as close to that as possible, instead of just doing a plain content dump as 
+we were instructed to do.
+
+After that, I discussed my progress with Charlotte. She loved the color scheme
+and general layout. Also, she told me to make some of the text larger, and helped
+give me direction on what animations to design. Furthermore, I had not yet designed
+how I wanted the internal pages to look, but we agreed that it would be best to keep
+it simple.
+
+Lastly, it was time to deploy the final version of the microsite. I had to gather and
+curate a lot of content for this to fill out the internal pages. Also, I had to incorporate
+java script files to get the animations and transitions working smoothly across all pages.
+
+--- OUTCOMES & AI ---
+
+Overall I'm pretty satisfied with how the microsite turned out. I did a lot of research and
+spent a lot of time designing the home page, and I think the layout perfectly reflected the
+desired tone and goal of the project. I'm glad I starting developing the home page in code
+from the jump as well; it made the project more effecient and more cohesive when it came to
+building out the other pages. Speaking of which, I think the internal pages could have been
+better designed. I don't like how much of plain F-style look they had. Also, I think the 
+content in general could have been grouped and possibly worded better. However, with the 
+time constraints of the project and the limited guidance / knowledge we had, I think 
+it was ok.
+
+I relied on AI a lot for this project. The primarly language models I used were Microsoft
+Copilot and Claude. Most of the code I did physically write myself. But I did use AI for a
+lot of debugging, learning new concepts, and refamiliarizing myself with old concepts. I also
+used AI to generate some of the images that I included in my microsite. Lastly, I used the AI
+tools to help me change the wording of some of my content to better fit with the tone of the
+project or just to truncate the text in general.

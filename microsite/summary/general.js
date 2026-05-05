@@ -1,0 +1,25 @@
+const navBtn = document.getElementById("nav-btn");
+const popupMenu = document.getElementById("popup-menu");
+const menu_overlay = document.getElementById("popup-overlay");
+const menu_x = document.getElementById("menu-x");
+const involvedBtns = document.querySelectorAll(".involved-btn");
+
+
+navBtn.addEventListener("click", () => {
+    popupMenu.classList.add("open");
+    menu_overlay.classList.add("open");
+});
+
+function closePopup() {
+    popupMenu.classList.remove("open");
+    menu_overlay.classList.remove("open");
+}
+menu_overlay.addEventListener("click", closePopup);
+menu_x.addEventListener("click", closePopup);
+
+involvedBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.open("https://fucaziswagg.github.io/ifspring2026/microsite/final/index.html", "_blank");
+    });
+});
